@@ -1,0 +1,21 @@
+\sectionwithtoclink{Conclusion}
+
+This paper has covered the theory and practical implementation of the Heston stochastic volatility model from first principles through to calibration on real market data.
+
+We began by deriving the Fourier-based pricing framework by Lewis~\cite{lewis2001}, showing how the covered-call can be priced via a half-line integral formula once the characteristic function of the log asset price is
+known and behaves well enough, and how that translates to a call/put price. Once that was established we spent a lot of energy deriving the Heston model CF from the bottom up and arguing that it satisfies the sufficient conditions to
+use the Lewis style formula we derived, leaving as few gaps as possible.
+
+On the more practical side we spent some time discussing data handling steps and how differing approaches to the objective function might change the calibration in the end. We then took a small detour to discuss the actual implementation of the pricing engine, from the quadrature choice to mentioning
+a way of computing an analytical gradient which might work, and then ran a small experiment comparing these different implementations. This experiment suggests that we are able to reduce the calibration time quite a bit, by going from a Gauss--Kronrod quadrature to a simple calculation using the trapezoid rule,
+and by implementing the analytical gradient discussed in~\cite{germano2017}. This isn't necessary for this project at all as we might as well take the more precise approach when time is no issue, but if one considered a
+more live version of this pricing engine taking the live order book instead of just a stale day from 2019, one could definitely see the benefit.
+
+We then calibrated the model to closing data from 13/11/2019 with two different weighting schemes. We found that ``no-weighting'' fitted very well to more expensive ITM calls at the expense of cheaper ones, while the ``relative-error''
+weighting prioritises the cheaper ITM and short-duration options. Both calibrations, however, captured the overall shape of the volatility surface quite well.
+
+Natural ways to capture more of the shape of the volatility surface would of course be to add more complexity. This could include jumps, an additional vol process, or making the vol-of-vol process stochastic too, or as discussed simply targeting the implied volatilities directly.
+ 
+
+
+

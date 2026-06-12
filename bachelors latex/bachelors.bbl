@@ -1,0 +1,58 @@
+\begin{thebibliography}{10}
+
+\bibitem{lewis2001}
+Alan~L. Lewis.
+\newblock A simple option formula for general jump-diffusion and other exponential {L\'{e}vy} processes.
+\newblock Technical report, Envision Financial Systems, 2001.
+
+\bibitem{germano2017}
+Yiran Cui, Sebasti{\'a}n del Ba{\~n}o~Rollin, and Guido Germano.
+\newblock Full and fast calibration of the {H}eston stochastic volatility model.
+\newblock 2017.
+
+\bibitem{heston1993}
+Steven~L. Heston.
+\newblock A closed-form solution for options with stochastic volatility with applications to bond and currency options.
+\newblock 1993.
+
+\bibitem{gatheral2006}
+Jim Gatheral.
+\newblock {\em The Volatility Surface: A Practitioner's Guide}.
+\newblock Wiley, 2006.
+
+\bibitem{albrecher2007}
+Hansj{\"o}rg Albrecher, Philipp Mayer, Walter Schachermayer, and Josef Teichmann.
+\newblock The little {H}eston trap.
+\newblock 2006.
+
+\bibitem{delBanoRollin2010}
+Sebasti{\'a}n del Ba{\~n}o~Rollin, Albert Ferreiro-Castilla, and Frederic Utzet.
+\newblock A new look at the heston characteristic function.
+\newblock 2010.
+
+\bibitem{DataHandeling}
+Thomas Kokholm.
+\newblock Inferring dividend yield and discount rates from option prices.
+\newblock Lecture Note.
+
+\bibitem{scipy2020}
+{SciPy Contributors}.
+\newblock {SciPy} version 1.15.1.
+\newblock \url{https://scipy.org}, 2025.
+
+\bibitem{ContagiousMarkets}
+Thomas Kokholm.
+\newblock Pricing and hedging of derivativesin contagious markets.
+
+\bibitem{github_repo}
+Heston model calibration --- code repository.
+\newblock \url{https://github.com/Asger1304/bachelors}, 2026.
+\newblock No Name to see here...
+
+\bibitem{baudouin2019}
+Fabrice Baudouin.
+\newblock {\em Diffusion Processes and Stochastic Calculus}.
+\newblock 2019.
+\newblock Lecture notes.
+
+\end{thebibliography}

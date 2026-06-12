@@ -1,0 +1,26 @@
+\sectionwithtoclink{Introduction}
+
+The Black--Scholes--Merton (BSM) model prices options under the assumption of constant volatility across strikes and maturities.
+This implies a flat implied volatility surface which, in practice, is far from the case. Market-implied volatilities are both skewed and far from
+constant across maturities, so any serious attempt to model option prices must therefore account for stochastic volatility.
+
+The Heston model~\cite{heston1993} is one such model, extending BSM by letting the volatility follow a mean-reverting square-root (CIR) process
+which is allowed to be correlated with the asset. One of the advantages of the Heston model is that it captures a lot of the shape of the volatility surface,
+while still having a nice analytical expression for the characteristic function of the log asset price. The CF being well enough behaved turns out to be all one needs to price derivatives
+due to Fourier methods, which we will use the beginning of this paper to show how.
+
+This paper tries to develop as much of the pipeline as possible. After finding a pricing formula for calls when the CF has certain properties,
+we spend some time deriving the original expression for the Heston CF and verify that it has the aforementioned properties. Moving on to implementation, we set
+up an experiment to compare quadratures as well as the impact of introducing an analytical gradient~\cite{germano2017} on the speed of calibration. Finally,
+we calibrate the model to S\&P 500 closing option prices under two weighting schemes and examine how the choice of objective function shapes the fitted implied volatility surface.
+
+
+
+Notation Note: We take a lot of expectations in the beginning of the paper, usually of what turns out to be stochastic processes when taking these we know their values at time 0 making every expectation $\mathbb{E}_{(x_0,v_0)}$ 
+instead of writing this every time we will simply define this as the default probabilitymeasure. Usually we like to note information up to a time as $\mathcal{F}_t$ in this paper i've choosen to drop the filters i.e work from the filter $\mathcal{F}_0$. One should 
+note that since the heston model is a markov process everything still works as every expectation is essentially $\mathbb{E}_{(x_0,v_0)}$ and by the markov property 
+$\mathbb{E}_\mu[f(X_{t+s},V_{t+s})|\mathcal{F}]=\mathbb{E}_{(x_t,v_t)}[f(X_s,V_s)]$ for $f$ non negative and measuerable, so this actually dosen't change anything simply set $T=T-t\quad x_0=x_t,v_0=v_t$
+
+
+
+

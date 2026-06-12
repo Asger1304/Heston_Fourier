@@ -1,0 +1,132 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{float}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+\setlength{\abovedisplayskip}{6pt}
+\setlength{\belowdisplayskip}{6pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{4pt}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,
+            linkcolor=black,
+            citecolor=blue!60!black,
+            urlcolor=blue!60!black]{hyperref}
+\usepackage{amsthm}
+\usepackage[numbers,sort&compress]{natbib}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\theoremstyle{plain}
+\allowdisplaybreaks
+
+\begin{document}
+
+% ============================================================
+% GAI Declaration
+% ============================================================
+\thispagestyle{empty}
+
+\noindent{\Large\bfseries Deklaration for brug af GAI-værktøjer}
+
+\bigskip
+\noindent\fbox{%
+\begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+\smallskip
+
+\noindent\fbox{%
+\begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+\smallskip
+
+\noindent$\boxtimes$\enspace\textbf{Jeg/vi har benyttet generativ kunstig intelligens til udfærdigelse af dette projekt}
+\textit{(sæt kryds). Oplist, hvilke GAI-værktøjer der er benyttet (husk version):}
+\begin{itemize}
+  \item Claude sonnet 4.6
+\end{itemize}
+
+\vspace{5em}
+\smallskip
+\end{minipage}}
+
+\medskip
+\noindent\textbf{Jeg/vi har brugt GAI-værktøjer på følgende vis:}
+\begin{itemize}
+  \item latex kode hjælp både debugging, hjælp til at bygge lidt mere spøjse objekter såsom denne side og overordnet struktur af latexcode
+  \item Debugging af python kode
+  \item korrekturlæsning
+\end{itemize}
+
+
+\medskip
+
+
+\medskip
+\noindent\textit{For hvert relevant område forklares, hvordan GAI er benyttet (se forklaringer af de
+forskellige anvendelsesmuligheder på \href{https://studypedia.au.dk}{Studypedia}). Beskriv
+f.eks.\ kortfattet, hvordan informationen blev genereret, og forklar, hvordan outputtet er
+anvendt i din/jeres opgave.}
+
+\smallskip
+\end{minipage}}
+
+\newpage
+
+\begin{titlepage}
+  \centering
+  \vspace*{3cm}
+
+  {\large Bachelor's Project}\\[2cm]
+
+  {\LARGE\bfseries  Lewis Style Fourier-Pricing and the Heston model\\[0.4em]}
+  {\large\itshape Lewis-inspireret Fourier-prissætning og Heston modellen}\\[3cm]
+
+  \begin{tabular}{rl}
+    \textbf{Supervisor:}    & Elisa Nicolato \\[0.4em]
+    \textbf{Date:}          & [submission date] \\
+  \end{tabular}
+
+  \vfill
+\end{titlepage}
+\newpage
+\section*{Abstract}
+The Black--Scholes--Merton model prices options under the assumption of constant volatility, which implies a flat implied volatility surface. In practice this is not the case, and any serious attempt needs to account for the smile and structure observed in the market.
+
+This paper covers the full pipeline of the Heston model, from theory through to calibration on real market data. Starting from the Lewis \cite{lewis2001}  Fourier pricing framework, we derive a general formula for pricing a covered call given any characteristic function satisfying mild regularity conditions, and then derive the Heston characteristic function from the Feynman--Kac equations, verifying that it meets those conditions. On the implementation side we run an experiment comparing different quadrature choices and the impact of an analytical gradient due to Germano et al.\cite{germano2017} on calibration speed. Finally, we calibrate the model to S\&P 500 closing option prices from 13 November 2019 under two different weighting schemes and examine how the choice of objective function shapes the fitted implied volatility surface.
+
+\newpage
+\section*{Resumé}
+Black-Scholes-Merton modellen prisfastsætter optioner under antagelsen om konstant volatilitet, som medfører en flad volatility-surface. Dette er dog langt fra hvad der observeres i praksis og et særiøst forsøg på at modellere optionspriser 
+blivder derved nød til at tage højde for volatilitets-smilet og dens opførsel når vi går længere ud på kurven.
+
+Denne opgave dækker hele processen af prisfastsættelse på Heston modellen, fra Fourier-teori til model kalibrering. Med udgangspunkt i Lewis \cite{lewis2001} Fourier-metoder, 
+klæder vi os på til at prisfastsætte et Covered Call på en generel karakteristisk funktion, under nogle regularitetsbetingelser. Vi udleder herefter Heston-modellens karakteristiske funktion ud fra Feynman-kac betingelserne og verificerer at fourier metoderne kan bruges. 
+på implementeringssiden kører vi et eksperiment der sammenligner hastigheden af kalibrering udført med forskellige kvadraturer, samt brug af en analytisk gradient fra Germano et al.\cite{germano2017}. Til slut kalibrer vi modellen til lukkepriser på S\&P 500 indeks optioner fra 13/11/2019 under to forskellige vægtningsmetoder og undersøger hvordan den ændrede objektivfunktion påvirker den tilpassede volatility-surface
+
+\newpage
+\tableofcontents
+\label{sec:toc}
+\newcommand{\sectionwithtoclink}[1]{\section[#1]{\texorpdfstring{\hyperref[sec:toc]{#1}}{#1}}}
+
+\let\origsubsection\subsection
+\renewcommand{\subsection}[1]{\origsubsection[#1]{\texorpdfstring{\hyperref[sec:toc]{#1}}{#1}}}
+\let\origsubsubsection\subsubsection
+\renewcommand{\subsubsection}[1]{\origsubsubsection[#1]{\texorpdfstring{\hyperref[sec:toc]{#1}}{#1}}}
+
+\input{chapters/introduction}
+\input{chapters/fourier_pricing}
+\input{chapters/heston_model}
+\input{chapters/calibration}
+\input{chapters/conclusion}
+\input{chapters/appendix}
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document}

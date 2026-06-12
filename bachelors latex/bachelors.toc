@@ -1,0 +1,26 @@
+\contentsline {section}{\numberline {1}Introduction}{4}{section.1}%
+\contentsline {section}{\numberline {2}Fourier Pricing}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}The Lewis Formula}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Pricing Options via the Covered Call/Cash Secured Put}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Existence Strip of the CF}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}A General Formula for a Covered-Call Price Using Lewis}{7}{subsection.2.4}%
+\contentsline {section}{\numberline {3}The Heston Model}{9}{section.3}%
+\contentsline {subsection}{\numberline {3.1}The Model}{9}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}The Heston CF}{10}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Calibration of the Heston Model}{16}{section.4}%
+\contentsline {subsection}{\numberline {4.1}The Data}{16}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}The Calibration Problem}{17}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Numerics}{19}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}The calibration}{21}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}unweighted}{22}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}relative error}{23}{subsubsection.4.4.2}%
+\contentsline {section}{\numberline {5}Conclusion}{23}{section.5}%
+\contentsline {section}{\numberline {6}Appendix}{24}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Generalised Fourier Inversion}{24}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}stochastic calculus}{25}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}ito's lemma}{25}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}the feyman kac formula}{25}{subsubsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.3}derivations}{26}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}$L^1$ bound for $\psi (\cdot -i/2)$}{26}{subsubsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.4}Figures}{27}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}code}{30}{subsection.6.5}%

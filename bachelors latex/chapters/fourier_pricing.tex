@@ -1,0 +1,177 @@
+\sectionwithtoclink{Fourier Pricing}
+
+When dealing with more complex models for asset prices than the Black--Scholes model, the fact that there is no known analytical
+density for the underlying at time $T$ becomes a common problem, as for a european derivative the calculation $\mathbb{E}[w(S_T)]$ is
+no longer a straightforward integration exercise. For a subset of these more complicated models we've discovered analytical
+expressions for their characteristic functions. Using these as the means to price derivatives is exactly the task we will address over the next section.
+
+\subsection{The Lewis Formula}
+The following result is due to Lewis~\cite{lewis2001}.
+Let $X_t$ be a process with the ``flipped'' characteristic function $u\to\psi(-u)$, assume that this function is analytic and regular on the strip $\mathcal{S}_{-\psi}$.
+Let $w(x)\geq0$ with generalised Fourier transform $\hat{w}$ on strip of regularity $\mathcal{S}_w$. For
+$\alpha\in \{v\in\mathbb{R} : \{x+i v:x\in\mathbb{R}\}\subseteq \mathcal{S}_M=\mathcal{S}_{-\psi} \cap \mathcal{S}_w\}=A$
+\begin{align}
+\mathbb{E}[w(X_T)] = \frac{1}{2\pi}\int_{-\infty+i\alpha}^{\infty+i\alpha}\psi(-z)\hat{w}(z) dz
+\end{align}
+\begin{proof}
+Assume that $A$ is non-empty.
+Let $\alpha\in A$.
+By the inversion theorem and the choice of $\alpha$:
+\begin{align}
+\mathbb{E}[w(X_T)]&=\int_{-\infty}^{\infty}w(x)\frac{1}{2\pi}\int_{-\infty+i\alpha}^{\infty+i\alpha}\exp(-izx)\psi(-z) dzdx
+\end{align}
+We check that the product is integrable via Tonelli's theorem:
+\begin{equation}\int_{-\infty}^{\infty} \int_{-\infty}^{\infty}
+|w(x)| \cdot e^{-\alpha x} \cdot |\psi(-(u+i\alpha))|\, du\, dx < \infty\end{equation}
+since $w(x)\exp(-\alpha x)\in L^1$ and $\psi(-(u+i\alpha))\in L^1$
+by the choice of $\alpha$.
+Thus we may apply Fubini's theorem:
+\begin{align}
+(3)&=\int_{-\infty+i\alpha}^{\infty+i\alpha}\psi(-z)\frac{1}{2\pi}\int_{-\infty}^{\infty}\exp(-izx)w(x) dxdz \\
+&=\frac{1}{2\pi}\int_{-\infty+i\alpha}^{\infty+i\alpha}\psi(-z)\hat{w}(z) dz\quad
+\end{align}
+\end{proof}
+Now, turning this into something useful for finance, we can pick a model of our choice with a nice characteristic function, a positive payoff function, and then calculate this integral.
+
+\subsection{Pricing Options via the Covered Call/Cash Secured Put}
+Throughout this section we work at time $t=0$ with maturity $T$, pricing today's option price.
+When one wants to apply this method to pricing options directly, it turns out that the available set $\mathcal{S}_M$ will narrow and widen depending
+on one's choice of parameters, which will make the whole task of calibrating a volatility surface based on a model more difficult.
+To circumvent this problem we will not price a call directly but rather price a covered-call.\\
+A covered call is what one gets by buying a forward on the underlying and selling a call on it, ``covering'' one's downside, giving the following payoff at time $T$:
+\begin{align}
+e^{X_T}-\max(0,e^{X_T}-K)=\min(e^{X_T},K) \\
+Z = e^{-rT}\mathbb{E}^{\mathbb{Q}}[\min(e^{X_T},K)]
+\end{align}
+then creating the call by replication.
+\begin{equation}C = e^{-rT}F_T-Z
+\end{equation}
+noting that by put-call parity
+\begin{equation}P = C-e^{-rT}F +e^{-rT}K = e^{-rT}K-Z
+\end{equation}
+so let's find the strip of regularity for this payoff
+\begin{align}
+    z= \beta+i \alpha \in S_f \Leftrightarrow \int_{-\infty}^{\infty}e^{-\alpha x}|\min(e^{x},K)|dx<\infty\\
+\int_{-\infty}^{\infty}e^{-\alpha x}|\min(e^{x},K)|dx = \int_{-\infty}^{\log(K)}e^{(1-\alpha) x} dx+\int_{\log(K)}^{\infty}e^{-\alpha x}K dx
+\end{align}
+Both integrals are positive, we simply need to figure out when they are finite, we do this rather simply with monotone convergence:
+
+\textbf{First integral:}\\
+For $\alpha =1$ we clearly diverge.\\
+For $\alpha \neq 1$:
+\begin{equation}\int_{-\infty}^{\log(K)}e^{(1-\alpha) x} dx= \lim_{n\to \infty}[-\frac{e^{(1-\alpha) x}}{1-\alpha}]^{\log(K)}_{-n}<\infty \Leftrightarrow \alpha<1
+\end{equation}
+
+\textbf{Second integral:}\\
+For $\alpha=0$ it explodes.\\
+For $\alpha\neq 0$:
+\begin{align}
+\int_{\log(K)}^{\infty}e^{-\alpha x}K dx = \lim_{n\to \infty}[-\frac{e^{-\alpha x}}{\alpha}]_{\log(K)}^n<\infty \Leftrightarrow \alpha>0
+\end{align}
+Combining these results,
+\begin{equation}z= \beta+i \alpha \in S_f \Leftrightarrow \alpha \in (0,1)
+\end{equation}
+Now let's calculate the generalised Fourier transform when it exists.
+Let $\alpha \in (0,1)$:
+\begin{align}
+    \hat{w} (\beta+i \alpha)&=\int_{-\infty}^{\infty}e^{i(\beta+i \alpha)x}w(x) dx\\
+    &=\int_{-\infty}^{\log(K)}e^{i(\beta+i \alpha)x}e^x dx + \int_{\log(K)}^{\infty}e^{i(\beta+i \alpha)x}K dx\\
+    &=\int_{-\infty}^{\log(K)}e^{i(\beta+i (\alpha-1))x} dx + \int_{\log(K)}^{\infty}e^{i(\beta+i \alpha)x}K dx\\
+    &= \lim_{n\to \infty}[\frac{e^{i(\beta+i (\alpha-1))x}}{i(\beta+i (\alpha-1))}]^{\log(K)}_{-n}+K \lim_{n\to \infty}[\frac{e^{i(\beta+i \alpha)x}}{i(\beta+i \alpha)}]^{n}_{\log(K)}\\
+    &= \frac{e^{i(\beta+i (\alpha-1))\log(K)}}{i(\beta+i (\alpha-1))} -K \frac{e^{i(\beta+i \alpha)\log(K)}}{i(\beta+i \alpha)}\\
+    &= K^{ 1+i(\beta+i \alpha)}(\frac{1}{1+i(\beta+i \alpha)} -\frac{1}{i(\beta+i \alpha)})\\
+    &=\frac{K^{1+iz}}{z^2-iz}
+\end{align}
+where a dominated convergence argument is used on the step from line 17 to line 18, and we swap to $z=\beta+i\alpha$ on the last step.
+
+\subsection{Existence Strip of the CF}
+
+Consider now a storable asset $S_T$ under the risk-neutral measure $\mathbb{Q}$ in a world with constant short rate $r>0$ and continuously paid dividend $q\geq0$. Let
+$X_T=\log(S_T)$, a consequence of the risk-neutral measure construction is that $\mathbb{E}[S_T]=\exp((r-q)T)S_0$.
+Before moving on we want to show that the CF for basically any type of model is well defined on $\Im(u)\in(0,1)$.\\
+In the following everything is happening under $\mathbb{Q}$.\\
+Let $u=\beta + i \alpha$.
+
+for $\alpha =0$
+\begin{align}
+\mathbb{E}[|\exp(-iuX_T)|]=1<\infty
+\end{align}
+
+for $\alpha = 1$
+\begin{align}
+\mathbb{E}[|\exp(-iuX_T)|]&=\mathbb{E}[|\exp(-i(\beta+i\alpha)X_T)|]\\
+&=\mathbb{E}[\exp(\alpha X_T)]\\
+&=\mathbb{E}[\exp(X_T)]\\
+&=\mathbb{E}[S_T]=\exp((r-q)T)S_0<\infty
+\end{align}
+for $\alpha\in (0,1)$, notice that $x\to x^\alpha$ is concave, then by Jensen's inequality
+\begin{align}
+\mathbb{E}[\exp(\alpha X_T)]&=\mathbb{E}[(\exp(X_T))^\alpha ]\\
+\leq (\mathbb{E}[\exp(X_T)])^\alpha &= S_0^\alpha  \exp(\alpha (r-q)T)<\infty\\
+&\Rightarrow \{z\in \mathbb{C} : \operatorname{Im}(z)\in[0,1]\}
+\end{align}
+
+
+
+\subsection{A General Formula for a Covered-Call Price Using Lewis}
+For log-asset dynamics $X_T=\log(S_T)$ under the risk-neutral measure $\mathbb{Q}$,
+now assume that
+$\{\alpha +\frac{i}{2} : \alpha\in\mathbb{R}\}\subseteq \mathcal{S}_{-\psi} \cap \mathcal{S}_w$. Choosing to integrate along the line $\{\alpha +\frac{i}{2} : \alpha\in\mathbb{R}\}$ we get a simple formula for the covered call at $t=0$.
+
+\begin{theorem}[Covered-Call price]
+Consider the covered call payoff function $w(x)=\min(e^x,K)$ and log-asset dynamics $X_T=\log(S_T)$ under $\mathbb{Q}$. Then the covered call price at $t=0$ is:
+\begin{equation}Z =\frac{e^{\frac{k}{2}-rT}}{\pi}\int_{0}^{\infty}\frac{\operatorname{Re}[\psi(u-\frac{i}{2})e^{-i k u}]}{u^2+\frac{1}{4}}du
+\end{equation}
+where $k=\log(K)$ and $\psi$ is the extended characteristic function of $X_T$
+\end{theorem}
+\begin{proof}
+By assumption $\{\alpha +\frac{i}{2} : \alpha\in\mathbb{R}\}\subseteq \mathcal{S}_{-\psi} \cap \mathcal{S}_w$.
+We choose to integrate across the line $\{\alpha +\frac{i}{2} : \alpha\in\mathbb{R}\}$, i.e.\ pick $\alpha =1/2$ in the Lewis formula. Taking the expression for $\hat{w}$ that we found:
+\begin{align}
+    \mathbb{E}[\min(e^{X_T},K)]&=\frac{1}{2\pi}\int_{-\infty+i\alpha}^{\infty+i\alpha}\psi(-z)\hat{w}(z) dz\quad\\
+    &=\frac{1}{2\pi}\int_{-\infty+i\alpha}^{\infty+i\alpha}\psi(-z)\frac{K^{1+iz}}{z^2-iz}dz \quad\\
+    &=\frac{1}{2\pi}\int_{-\infty+i\alpha}^{\infty+i\alpha}\mathbb{E}[e^{-izX_T}]\frac{K^{1+iz}}{z^2-iz}dz\\
+    &=\frac{K}{2\pi}\int_{-\infty+i\alpha}^{\infty+i\alpha}\mathbb{E}[e^{-izX_T}]\frac{K^{iz}}{z^2-iz}dz
+\end{align}
+now we change variable to $u=z-i\alpha$, note:
+\begin{align}
+(u+\frac{i}{2})^2-i(u+\frac{i}{2})&=u^2+iu-\frac{1}{4} -iu+\frac{1}{2}\\
+&=u^2+\frac{1}{4}\\
+\frac{K}{2\pi}\int_{-\infty+i\alpha}^{\infty+i\alpha}\mathbb{E}[e^{-izX_T}]\frac{K^{iz}}{z^2-iz}dz
+&=\frac{K}{2\pi}\int_{-\infty}^{\infty}\mathbb{E}[e^{-iuX_T}e^{\frac{X_T}{2}}]\frac{K^{iu}K^{-\frac{1}{2}}}{u^2+\frac{1}{4}}du\\
+&=\frac{K^{\frac{1}{2}}}{2\pi}\int_{-\infty}^{\infty}\mathbb{E}[e^{-iuX_T}e^{\frac{X_T}{2}}]\frac{K^{iu}}{u^2+\frac{1}{4}}du
+\end{align}
+setting $k = \log(K)$
+\begin{align}
+    &=\frac{e^{\frac{k}{2}}}{2\pi}\int_{-\infty}^{\infty}\psi(-u-\frac{i}{2})\frac{e^{i k u}}{u^2+\frac{1}{4}}du
+\end{align}
+now we notice:
+\begin{align}
+    \overline{\psi(-u-\frac{i}{2})}&=\overline{\mathbb{E}[e^{-iuX_T}e^{\frac{X_T}{2}}]}\\
+    &=\mathbb{E}[\overline{e^{-iuX_T}e^{\frac{X_T}{2}}}]\\
+    &=\mathbb{E}[e^{iuX_T}e^{\frac{X_T}{2}}]\\
+    &=\psi(u-\frac{i}{2})\\
+    \overline{e^{iku}}&=e^{-iku}\\
+    \overline{\frac{1}{u^2+\frac{1}{4}}}&=\frac{1}{(-u)^2+\frac{1}{4}}
+\end{align}
+combining with the result,
+\begin{align}
+f\in L^1 \overline{f(x)}=f(-x)\Rightarrow \int_{-\infty}^{\infty}f(x)dx = 2\int_{0}^{\infty}\operatorname{Re}[f(x)]dx=2\int_{0}^{\infty}\operatorname{Re}[f(-x)]dx
+\end{align}
+we then have
+\begin{align}
+    \frac{e^{\frac{k}{2}}}{2\pi}\int_{-\infty}^{\infty}\psi(-u-\frac{i}{2})\frac{e^{i k u}}{u^2+\frac{1}{4}}du
+    &=\frac{e^{\frac{k}{2}}}{\pi}\int_{0}^{\infty}\frac{\operatorname{Re}[\psi(u-\frac{i}{2})e^{-i k u}]}{u^2+\frac{1}{4}}du
+\end{align}
+Discounting then gives
+\begin{equation}
+Z = e^{-rT}\mathbb{E}[\min(e^{X_T},K)] = \frac{e^{\frac{k}{2}-rT}}{\pi}\int_{0}^{\infty}\frac{\operatorname{Re}[\psi(u-\frac{i}{2})e^{-i k u}]}{u^2+\frac{1}{4}}du
+\end{equation}
+\end{proof}
+\begin{remark}
+We can now price the put and call by replication:
+\begin{align}
+C &= e^{-rT}F_T-Z = e^{-rT}F_T-\frac{e^{\frac{k}{2}-rT}}{\pi}\int_{0}^{\infty}\frac{\operatorname{Re}[\psi(u-\frac{i}{2})e^{-i k u}]}{u^2+\frac{1}{4}}du\\
+P &= Ke^{-rT}-\frac{e^{\frac{k}{2}-rT}}{\pi}\int_{0}^{\infty}\frac{\operatorname{Re}[\psi(u-\frac{i}{2})e^{-i k u}]}{u^2+\frac{1}{4}}du
+\end{align}
+\end{remark}
