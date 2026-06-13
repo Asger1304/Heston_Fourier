@@ -17,10 +17,10 @@ we calibrate the model to S\&P 500 closing option prices under two weighting sch
 
 
 Notation Note: We take a lot of expectations in the beginning of the paper, usually of what turns out to be stochastic processes when taking these we know their values at time 0 making every expectation $\mathbb{E}_{(x_0,v_0)}$ 
-instead of writing this every time we will simply define this as the default probabilitymeasure. Usually we like to note information up to a time as $\mathcal{F}_t$ in this paper i've choosen to drop the filters i.e work from the filter $\mathcal{F}_0$. One should 
+instead of writing this every time we will simply define this as the default probability measure. Usually we like to note information up to a time as $\mathcal{F}_t$ in this paper I've chosen to drop the filters i.e work from the filter $\mathcal{F}_0$. One should 
 note that since the heston model is a markov process everything still works as every expectation is essentially $\mathbb{E}_{(x_0,v_0)}$ and by the markov property 
-$\mathbb{E}_\mu[f(X_{t+s},V_{t+s})|\mathcal{F}]=\mathbb{E}_{(x_t,v_t)}[f(X_s,V_s)]$ for $f$ non negative and measuerable, so this actually dosen't change anything simply set $T=T-t\quad x_0=x_t,v_0=v_t$
+$\mathbb{E}_\mu[f(X_{t+s},V_{t+s})|\mathcal{F}]=\mathbb{E}_{(x_t,v_t)}[f(X_s,V_s)]$ for $f$ non negative and measurable, so this actually doesn't change anything simply set $T=T-t\quad x_0=x_t,v_0=v_t$
 
-
+For ease of replication of the results in this paper i've created a Notebook running all the code, gennerating graphs/results. This along with all of the code is available here\cite{github_repo}.
 
 

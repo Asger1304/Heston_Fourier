@@ -12,16 +12,16 @@ Warning--empty year in ContagiousMarkets
 Warning--empty publisher in baudouin2019
 You've used 11 entries,
             1791 wiz_defined-function locations,
-            494 strings with 4839 characters,
-and the built_in function-call counts, 1554 in all, are:
-= -- 120
+            493 strings with 4817 characters,
+and the built_in function-call counts, 1545 in all, are:
+= -- 118
 > -- 65
 < -- 0
 + -- 28
 - -- 17
 * -- 49
-:= -- 268
-add.period$ -- 33
+:= -- 266
+add.period$ -- 32
 call.type$ -- 11
 change.case$ -- 10
 chr.to.int$ -- 0
@@ -29,17 +29,17 @@ cite$ -- 18
 duplicate$ -- 81
 empty$ -- 175
 format.name$ -- 17
-if$ -- 342
+if$ -- 340
 int.to.chr$ -- 0
 int.to.str$ -- 11
 missing$ -- 9
-newline$ -- 58
+newline$ -- 57
 num.names$ -- 10
 pop$ -- 60
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 30
+skip$ -- 31
 stack$ -- 0
 substring$ -- 0
 swap$ -- 5
@@ -50,5 +50,5 @@ type$ -- 0
 warning$ -- 7
 while$ -- 10
 width$ -- 13
-write$ -- 106
+write$ -- 104
 (There were 7 warnings)

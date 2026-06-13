@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex bachelors"] 1781308290.27612 "bachelors.aux" "bachelors.bbl" "bachelors" 1781345926.12534 0
-  "./references.bib" 1781308137.42866 2086 d552b989af600eedd4cecf33d9b59015 ""
+["bibtex bachelors"] 1781350043.00384 "bachelors.aux" "bachelors.bbl" "bachelors" 1781350044.28433 0
+  "./references.bib" 1781350041.47993 2044 6863e86a0c1fa0705a76c2a72cc7ac0f ""
   "/Users/asgeraircool/Library/TinyTeX/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "bachelors.aux" 1781345926.01 11198 eb9c083ec4e058157b783b7dfa22b03e "pdflatex"
+  "bachelors.aux" 1781350044.19658 11471 d25d0c92e4048f60a71a7b9c9f474905 "pdflatex"
   (generated)
   "bachelors.bbl"
   "bachelors.blg"
   (rewritten before read)
-["pdflatex"] 1781345924.82742 "/Users/asgeraircool/Documents/GitHub/Heston_Fourier/bachelors latex/bachelors.tex" "bachelors.pdf" "bachelors" 1781345926.12544 0
-  "/Users/asgeraircool/Documents/GitHub/Heston_Fourier/bachelors latex/bachelors.tex" 1781308288.63238 5800 887ba1bb44d20b933a1c0d65028d64bf ""
+["pdflatex"] 1781350043.01434 "/Users/asgeraircool/Documents/GitHub/Heston_Fourier/bachelors latex/bachelors.tex" "bachelors.pdf" "bachelors" 1781350044.28443 0
+  "/Users/asgeraircool/Documents/GitHub/Heston_Fourier/bachelors latex/bachelors.tex" 1781348171.22376 5792 782c6d9d7a317f0a1e1b0a16a07da739 ""
   "/Users/asgeraircool/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/Users/asgeraircool/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/Users/asgeraircool/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -151,17 +151,17 @@
   "/Users/asgeraircool/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1738849046 92947 f75d6bc95cd5a7ded26a07a3a97f9724 ""
   "/Users/asgeraircool/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1738848721 1928582 faa4d9ce3d38739c95b345a066cca825 ""
   "/Users/asgeraircool/Library/TinyTeX/texmf.cnf" 1738848699.04149 708 85fd07691b6294ba94c59dbc62380410 ""
-  "bachelors.aux" 1781345926.01 11198 eb9c083ec4e058157b783b7dfa22b03e "pdflatex"
-  "bachelors.bbl" 1781308290.28772 1767 300093a495419594aad5f64aaf9fcff8 "bibtex bachelors"
-  "bachelors.out" 1781345926.01091 3924 d9d4ea79b5254da05f68ebd97e05cfaa "pdflatex"
-  "bachelors.tex" 1781308288.63238 5800 887ba1bb44d20b933a1c0d65028d64bf ""
-  "bachelors.toc" 1781345926.01108 2203 da17e27e8f35cab114ba3a13615f2ab5 "pdflatex"
-  "chapters/appendix.tex" 1781307763.40656 7361 34a2554a127b5234611d6cfa511cba33 ""
-  "chapters/calibration.tex" 1781307763.40732 16165 1dc03f8143d5bb106fb8ec5c72fe87b2 ""
+  "bachelors.aux" 1781350044.19658 11471 d25d0c92e4048f60a71a7b9c9f474905 "pdflatex"
+  "bachelors.bbl" 1781350043.0126 1734 5bc482027e61ef948c29ab1e25303055 "bibtex bachelors"
+  "bachelors.out" 1781350044.19752 3926 401b079101a7024741abe7d3b4e70f28 "pdflatex"
+  "bachelors.tex" 1781348171.22376 5792 782c6d9d7a317f0a1e1b0a16a07da739 ""
+  "bachelors.toc" 1781350044.1977 2204 415ec249de047e33e406cc6f09ad4ceb "pdflatex"
+  "chapters/appendix.tex" 1781349282.05841 7362 0b9308d355e968aae1985c5de2f542e5 ""
+  "chapters/calibration.tex" 1781349806.67471 16559 c4b2ed04fba9ef4ba2735a489b64f26f ""
   "chapters/conclusion.tex" 1781307763.40804 2395 3967eff8403176c1f7b0b049e9736cfa ""
   "chapters/fourier_pricing.tex" 1781345924.64389 10271 8ffd87e533c592addfe7ca3f812007a4 ""
-  "chapters/heston_model.tex" 1781307763.414 15550 b63927d77b9a556eba2f7235d548d838 ""
-  "chapters/introduction.tex" 1781307763.41491 2519 de36af97d69deb75c987c41717f7017f ""
+  "chapters/heston_model.tex" 1781347461.35753 15569 312bfb859682b60ab8fe8e72c8320f75 ""
+  "chapters/introduction.tex" 1781348612.15117 2713 63ba7cdb34a1a143f7eb241e86cec9db ""
   "images/calibration_speed_experiment.png" 1781307763.4169 250362 01109d0abc52f02df76439999f973009 ""
   "images/implied_vol_market_only.png" 1781307763.41814 292928 bf953174a2433546d6604b1a30534089 ""
   "images/model_simulation.png" 1781307763.4194 231333 d387a1983482ebf45a3f8d2da363830a ""

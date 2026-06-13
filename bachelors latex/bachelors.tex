@@ -89,7 +89,7 @@ anvendt i din/jeres opgave.}
 
   \begin{tabular}{rl}
     \textbf{Supervisor:}    & Elisa Nicolato \\[0.4em]
-    \textbf{Date:}          & [submission date] \\
+    \textbf{Date:}          & 13--6--2026 \\
   \end{tabular}
 
   \vfill
@@ -102,12 +102,12 @@ This paper covers the full pipeline of the Heston model, from theory through to 
 
 \newpage
 \section*{Resumé}
-Black-Scholes-Merton modellen prisfastsætter optioner under antagelsen om konstant volatilitet, som medfører en flad volatility-surface. Dette er dog langt fra hvad der observeres i praksis og et særiøst forsøg på at modellere optionspriser 
-blivder derved nød til at tage højde for volatilitets-smilet og dens opførsel når vi går længere ud på kurven.
+Black-Scholes-Merton modellen prisfastsætter optioner under antagelsen om konstant volatilitet, som medfører en flad volatility-surface. Dette er dog langt fra hvad der observeres i praksis og et seriøst forsøg på at modellere optionspriser 
+bliver derved nød til at tage højde for volatilitets-smilet og dens opførsel når vi går længere ud på kurven.
 
 Denne opgave dækker hele processen af prisfastsættelse på Heston modellen, fra Fourier-teori til model kalibrering. Med udgangspunkt i Lewis \cite{lewis2001} Fourier-metoder, 
-klæder vi os på til at prisfastsætte et Covered Call på en generel karakteristisk funktion, under nogle regularitetsbetingelser. Vi udleder herefter Heston-modellens karakteristiske funktion ud fra Feynman-kac betingelserne og verificerer at fourier metoderne kan bruges. 
-på implementeringssiden kører vi et eksperiment der sammenligner hastigheden af kalibrering udført med forskellige kvadraturer, samt brug af en analytisk gradient fra Germano et al.\cite{germano2017}. Til slut kalibrer vi modellen til lukkepriser på S\&P 500 indeks optioner fra 13/11/2019 under to forskellige vægtningsmetoder og undersøger hvordan den ændrede objektivfunktion påvirker den tilpassede volatility-surface
+klæder vi os på til at prisfastsætte et Covered Call på en generel karakteristisk funktion, under nogle regularitetsbetingelser. Vi udleder herefter Heston-modellens karakteristiske funktion ud fra Feynman-Kac betingelserne og verificerer at fourier metoderne kan bruges. 
+På implementeringssiden kører vi et eksperiment der sammenligner hastigheden af kalibrering udført med forskellige kvadraturer, samt brug af en analytisk gradient fra Germano et al.\cite{germano2017}. Til slut kalibrer vi modellen til lukkepriser på S\&P 500 indeks optioner fra 13/11/2019 under to forskellige vægtningsmetoder og undersøger hvordan den ændrede objektivfunktion påvirker den tilpassede volatility-surface
 
 \newpage
 \tableofcontents

@@ -9,6 +9,7 @@
 \newlabel{sec:toc}{{}{3}{\contentsname \@mkboth {\MakeUppercase \contentsname }{\MakeUppercase \contentsname }}{section*.3}{}}
 \citation{heston1993}
 \citation{germano2017}
+\citation{github_repo}
 \citation{lewis2001}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{4}{section.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2}Fourier Pricing}{4}{section.2}\protected@file@percent }
@@ -40,15 +41,16 @@
 \newlabel{fig:market-iv-surface}{{2}{19}{Market implied volatility surface from S\&P 500 options data (13 November 2019, $S_0 = 3094$) after data cleaning, arbitrage filtering, and OTM selection}{figure.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Numerics}{19}{subsection.4.3}\protected@file@percent }
 \citation{germano2017}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Calibration speed experiment: wait time and $\DOTSB \sum@ \slimits@ |\Delta \theta |$ relative to the GK baseline across 20 random Heston parameter draws satisfying the Feller condition. Code for replication can be found in the repo.}}{20}{figure.3}\protected@file@percent }
-\newlabel{fig:calibration-speed}{{3}{20}{Calibration speed experiment: wait time and $\sum |\Delta \theta |$ relative to the GK baseline across 20 random Heston parameter draws satisfying the Feller condition. Code for replication can be found in the repo}{figure.3}{}}
+\citation{albrecher2007}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Calibration speed experiment: wait time and $\DOTSB \sum@ \slimits@ |\Delta \theta |$ relative to the GK baseline across 20 random Heston parameter draws satisfying the Feller condition. Code for replication can be found in the repo. We see convergence towards the true solution for all the methods, making time the only meaningfull measurement.}}{20}{figure.3}\protected@file@percent }
+\newlabel{fig:calibration-speed}{{3}{20}{Calibration speed experiment: wait time and $\sum |\Delta \theta |$ relative to the GK baseline across 20 random Heston parameter draws satisfying the Feller condition. Code for replication can be found in the repo. We see convergence towards the true solution for all the methods, making time the only meaningfull measurement}{figure.3}{}}
 \citation{github_repo}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4}The calibration}{21}{subsection.4.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1}unweighted}{22}{subsubsection.4.4.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Heston model fitted IV surface (unweighted calibration) vs.\ market implied volatility surface, S\&P 500 options (13 November 2019, $S_0 = 3094$).}}{22}{figure.4}\protected@file@percent }
 \newlabel{fig:iv-fit-unweighted}{{4}{22}{Heston model fitted IV surface (unweighted calibration) vs.\ market implied volatility surface, S\&P 500 options (13 November 2019, $S_0 = 3094$)}{figure.4}{}}
 \citation{lewis2001}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}relative error}{23}{subsubsection.4.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}Relative error}{23}{subsubsection.4.4.2}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Heston model fitted IV surface (relative error weighting) vs.\ market implied volatility surface, S\&P 500 options (13 November 2019, $S_0 = 3094$).}}{23}{figure.5}\protected@file@percent }
 \newlabel{fig:iv-fit-relative}{{5}{23}{Heston model fitted IV surface (relative error weighting) vs.\ market implied volatility surface, S\&P 500 options (13 November 2019, $S_0 = 3094$)}{figure.5}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{23}{section.5}\protected@file@percent }
@@ -58,9 +60,9 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Generalised Fourier Inversion}{25}{subsection.6.1}\protected@file@percent }
 \newlabel{app:gen_fourier}{{6.1}{25}{Generalised Fourier Inversion}{subsection.6.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.2}stochastic calculus}{25}{subsection.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.1}ito's lemma}{25}{subsubsection.6.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.2}the feyman kac formula}{26}{subsubsection.6.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}derivations}{26}{subsection.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.1}Ito's lemma}{25}{subsubsection.6.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.2}The Feynman-Kac Formula}{26}{subsubsection.6.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Derivations}{26}{subsection.6.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.1}$L^1$ bound for $\psi (\cdot -i/2)$}{26}{subsubsection.6.3.1}\protected@file@percent }
 \newlabel{app:l1bound}{{6.3.1}{26}{$L^1$ bound for $\psi (\cdot -i/2)$}{subsubsection.6.3.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Figures}{27}{subsection.6.4}\protected@file@percent }
@@ -68,8 +70,8 @@
 \newlabel{fig:heston-simulation-app}{{A.1}{27}{Simulated Heston model paths for the asset price and variance process using a Milstein-corrected Euler scheme ($S_0=100$, $v_0=0.04$, $\kappa =2.0$, $\theta =0.04$, $\sigma =0.6$, $\rho =-0.7$, $r=0.05$, $q=0.02$, $T=1$, $N=512$)}{figure.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {A.2}{\ignorespaces Market implied volatility surface from S\&P 500 options data (13 November 2019, $S_0 = 3094$) after data cleaning and arbitrage filtering, plotted against strike and log-moneyness.}}{27}{figure.2}\protected@file@percent }
 \newlabel{fig:market-iv-surface-app}{{A.2}{27}{Market implied volatility surface from S\&P 500 options data (13 November 2019, $S_0 = 3094$) after data cleaning and arbitrage filtering, plotted against strike and log-moneyness}{figure.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.3}{\ignorespaces Calibration speed experiment: wall time and $\DOTSB \sum@ \slimits@ |\Delta \sigma |$ relative to the GK baseline across 20 random Heston parameter draws satisfying the Feller condition.}}{28}{figure.3}\protected@file@percent }
-\newlabel{fig:calibration-speed-app}{{A.3}{28}{Calibration speed experiment: wall time and $\sum |\Delta \sigma |$ relative to the GK baseline across 20 random Heston parameter draws satisfying the Feller condition}{figure.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.3}{\ignorespaces Calibration speed experiment: wait time and $\DOTSB \sum@ \slimits@ |\Delta \sigma |$ relative to the GK baseline across 20 random Heston parameter draws satisfying the Feller condition.}}{28}{figure.3}\protected@file@percent }
+\newlabel{fig:calibration-speed-app}{{A.3}{28}{Calibration speed experiment: wait time and $\sum |\Delta \sigma |$ relative to the GK baseline across 20 random Heston parameter draws satisfying the Feller condition}{figure.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {A.4}{\ignorespaces Heston model fitted IV surface (unweighted calibration) vs.\ market implied volatility surface, S\&P 500 options (13 November 2019, $S_0 = 3094$).}}{28}{figure.4}\protected@file@percent }
 \newlabel{fig:iv-fit-unweighted-app}{{A.4}{28}{Heston model fitted IV surface (unweighted calibration) vs.\ market implied volatility surface, S\&P 500 options (13 November 2019, $S_0 = 3094$)}{figure.4}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {A.5}{\ignorespaces Alternative viewing angle of the Heston fitted IV surface (unweighted calibration) vs.\ market implied volatility surface, S\&P 500 options (13 November 2019, $S_0 = 3094$).}}{29}{figure.5}\protected@file@percent }
@@ -85,13 +87,13 @@
 \bibcite{lewis2001}{{1}{}{{}}{{}}}
 \bibcite{germano2017}{{2}{}{{}}{{}}}
 \bibcite{heston1993}{{3}{}{{}}{{}}}
-\bibcite{gatheral2006}{{4}{}{{}}{{}}}
-\bibcite{albrecher2007}{{5}{}{{}}{{}}}
-\bibcite{delBanoRollin2010}{{6}{}{{}}{{}}}
-\bibcite{DataHandeling}{{7}{}{{}}{{}}}
-\bibcite{scipy2020}{{8}{}{{}}{{}}}
-\bibcite{ContagiousMarkets}{{9}{}{{}}{{}}}
-\bibcite{github_repo}{{10}{}{{}}{{}}}
+\bibcite{github_repo}{{4}{}{{}}{{}}}
+\bibcite{gatheral2006}{{5}{}{{}}{{}}}
+\bibcite{albrecher2007}{{6}{}{{}}{{}}}
+\bibcite{delBanoRollin2010}{{7}{}{{}}{{}}}
+\bibcite{DataHandeling}{{8}{}{{}}{{}}}
+\bibcite{scipy2020}{{9}{}{{}}{{}}}
+\bibcite{ContagiousMarkets}{{10}{}{{}}{{}}}
 \bibcite{baudouin2019}{{11}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
 \gdef \@abspage@last{33}

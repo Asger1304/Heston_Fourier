@@ -15,6 +15,10 @@ Steven~L. Heston.
 \newblock A closed-form solution for options with stochastic volatility with applications to bond and currency options.
 \newblock 1993.
 
+\bibitem{github_repo}
+Heston model calibration --- code repository.
+\newblock \url{https://github.com/Asger1304/Heston_Fourier}, 2026.
+
 \bibitem{gatheral2006}
 Jim Gatheral.
 \newblock {\em The Volatility Surface: A Practitioner's Guide}.
@@ -43,11 +47,6 @@ Thomas Kokholm.
 \bibitem{ContagiousMarkets}
 Thomas Kokholm.
 \newblock Pricing and hedging of derivativesin contagious markets.
-
-\bibitem{github_repo}
-Heston model calibration --- code repository.
-\newblock \url{https://github.com/Asger1304/Heston_Fourier}, 2026.
-\newblock No Name to see here...
 
 \bibitem{baudouin2019}
 Fabrice Baudouin.
