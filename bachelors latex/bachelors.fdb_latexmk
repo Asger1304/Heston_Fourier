@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex bachelors"] 1781308071.66533 "bachelors.aux" "bachelors.bbl" "bachelors" 1781308073.09601 0
-  "./references.bib" 1781307763.42932 2081 5562e54a8518b84c81b2c684ef09ecbb ""
+["bibtex bachelors"] 1781308290.27612 "bachelors.aux" "bachelors.bbl" "bachelors" 1781345926.12534 0
+  "./references.bib" 1781308137.42866 2086 d552b989af600eedd4cecf33d9b59015 ""
   "/Users/asgeraircool/Library/TinyTeX/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "bachelors.aux" 1781308072.99591 11198 d75739d99a0f8dc0e5e666aa1832ba2c "pdflatex"
+  "bachelors.aux" 1781345926.01 11198 eb9c083ec4e058157b783b7dfa22b03e "pdflatex"
   (generated)
   "bachelors.bbl"
   "bachelors.blg"
   (rewritten before read)
-["pdflatex"] 1781308071.67926 "/Users/asgeraircool/Documents/GitHub/Heston_Fourier/bachelors latex/bachelors.tex" "bachelors.pdf" "bachelors" 1781308073.09614 0
-  "/Users/asgeraircool/Documents/GitHub/Heston_Fourier/bachelors latex/bachelors.tex" 1781308069.94107 5783 c74c7e14f905750b890cc819069164ba ""
+["pdflatex"] 1781345924.82742 "/Users/asgeraircool/Documents/GitHub/Heston_Fourier/bachelors latex/bachelors.tex" "bachelors.pdf" "bachelors" 1781345926.12544 0
+  "/Users/asgeraircool/Documents/GitHub/Heston_Fourier/bachelors latex/bachelors.tex" 1781308288.63238 5800 887ba1bb44d20b933a1c0d65028d64bf ""
   "/Users/asgeraircool/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/Users/asgeraircool/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/Users/asgeraircool/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -151,15 +151,15 @@
   "/Users/asgeraircool/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1738849046 92947 f75d6bc95cd5a7ded26a07a3a97f9724 ""
   "/Users/asgeraircool/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1738848721 1928582 faa4d9ce3d38739c95b345a066cca825 ""
   "/Users/asgeraircool/Library/TinyTeX/texmf.cnf" 1738848699.04149 708 85fd07691b6294ba94c59dbc62380410 ""
-  "bachelors.aux" 1781308072.99591 11198 d75739d99a0f8dc0e5e666aa1832ba2c "pdflatex"
-  "bachelors.bbl" 1781308071.67717 1762 0ada3f4516cfaa7f9bf416ce28ead653 "bibtex bachelors"
-  "bachelors.out" 1781308072.99736 3924 d9d4ea79b5254da05f68ebd97e05cfaa "pdflatex"
-  "bachelors.tex" 1781308069.94107 5783 c74c7e14f905750b890cc819069164ba ""
-  "bachelors.toc" 1781308072.9976 2203 7ce10ef57ee651449007ea6a6ced4d09 "pdflatex"
+  "bachelors.aux" 1781345926.01 11198 eb9c083ec4e058157b783b7dfa22b03e "pdflatex"
+  "bachelors.bbl" 1781308290.28772 1767 300093a495419594aad5f64aaf9fcff8 "bibtex bachelors"
+  "bachelors.out" 1781345926.01091 3924 d9d4ea79b5254da05f68ebd97e05cfaa "pdflatex"
+  "bachelors.tex" 1781308288.63238 5800 887ba1bb44d20b933a1c0d65028d64bf ""
+  "bachelors.toc" 1781345926.01108 2203 da17e27e8f35cab114ba3a13615f2ab5 "pdflatex"
   "chapters/appendix.tex" 1781307763.40656 7361 34a2554a127b5234611d6cfa511cba33 ""
   "chapters/calibration.tex" 1781307763.40732 16165 1dc03f8143d5bb106fb8ec5c72fe87b2 ""
   "chapters/conclusion.tex" 1781307763.40804 2395 3967eff8403176c1f7b0b049e9736cfa ""
-  "chapters/fourier_pricing.tex" 1781307763.40875 10253 6335821b8c30361d2bda22baaaf911b2 ""
+  "chapters/fourier_pricing.tex" 1781345924.64389 10271 8ffd87e533c592addfe7ca3f812007a4 ""
   "chapters/heston_model.tex" 1781307763.414 15550 b63927d77b9a556eba2f7235d548d838 ""
   "chapters/introduction.tex" 1781307763.41491 2519 de36af97d69deb75c987c41717f7017f ""
   "images/calibration_speed_experiment.png" 1781307763.4169 250362 01109d0abc52f02df76439999f973009 ""
